@@ -11,6 +11,18 @@ document.getElementById('countdown').innerHTML = countDownNumber;
 		timer= setInterval(function () {
 			countDownNumber--;
 			document.getElementById('countdown').innerHTML = countDownNumber;
+			if (countDownNumber > 4 && countDownNumber <= 6) {
+				document.getElementById('bye').className = 'bye show';
+			} else {
+				document.getElementById('bye').className = 'bye';
+			}
+
+			if (countDownNumber > 1 && countDownNumber <= 4) {
+				document.getElementById('moon').className = 'moon show';
+			} else {
+				document.getElementById('moon').className = 'moon';
+			}
+
 			if (countDownNumber <= 0)
 			{
 				changeState(3);
@@ -22,7 +34,7 @@ document.getElementById('countdown').innerHTML = countDownNumber;
 
 console.log('randomNumber:' + randomNumber);
 			//success
-			if (randomNumber > 3) {
+			if (randomNumber > 2) {
 				changeState(4);
 			} else {
 				changeState(5);

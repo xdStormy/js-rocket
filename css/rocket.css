@@ -16,18 +16,38 @@
 	right: 0;
 }
 
+.interface{
+	text-align: center;
+	padding: 20px;
+	
+}
+
 .rocket{
 	position: absolute;
 	left: 50%;
 	bottom: 20px;
-	width: 20px;
-	height: 100px;
-	background-color: blue;
+	width: 133px;
+	height: 280px;
+	background: url('../img/rocket-state1.png') no-repeat 0 0 ;
 	transition: bottom 10000ms;
+	margin-left: -64px;
 }
 
 body.body-state1 .rocket{
 	transition: none;
+}
+
+/* rocket bg image */
+body.body-state3 .rocket,
+body.body-state4 .rocket{
+	background-image: url('../img/rocket-state2.gif');
+}
+
+body.body-state5 .rocket{
+	background-image: url('../img/explosion.png');
+	width: 400px;
+	height: 420px;
+	margin-left: -200px;
 }
 
 body.body-state3 .rocket,
@@ -35,13 +55,41 @@ body.body-state4 .rocket{
 	bottom: 1000px;
 }
 
-.ground{
-	background-color: green;
+.ground {
+  	position: absolute;
+  	background: url('../img/ground.png') no-repeat center 0;
+  	bottom: 0px;
+  	width: 100%;
+  	height: 100px;
+}
+
+.bye {
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	width: 100%;
-	height: 20px;
+	bottom: 250px;
+	left: 50%;
+	background: url('../img/bye.png') no-repeat 0 0;
+	width: 164px;
+	height: 100px;
+	margin-left: -152px;
+	display: none;
+}
+
+.bye.show {
+	display: block;
+}
+
+.moon {
+	position: absolute;
+	bottom: 260px;
+	left: 50%;
+	background: url('../img/moon.png') no-repeat 0 0;
+	width: 214px;
+	height: 100px; 
+	display: none;
+}
+
+.moon.show {
+	display: block;
 }
 
 .state1,
